@@ -1,0 +1,1313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Resumption of Studies Application</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+	<!--Datepicker-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+	<!--Local Files for Datepicker-->
+	<link rel="stylesheet" type="text/css" href="js/jquery.datepick.css"> 
+	<script type="text/javascript" src="js/jquery.plugin.js"></script> 
+	<script type="text/javascript" src="js/jquery.datepick.js"></script>
+	
+	<!--Local Files for Input Mask-->
+	<script type="text/javascript" src="js/jquery.maskedinput.js"> </script>
+	
+	<!--Local Files for Country Select-->
+	<!--<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>-->
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.select-to-autocomplete.js"></script>
+	<script>
+	  (function($){
+	    $(function(){
+	      $('select').selectToAutocomplete();
+	      $('form').submit(function(){
+	        alert( $(this).serialize() );
+	        return false;
+	      });
+	    });
+	  })(jQuery);
+	</script>
+	<link rel="stylesheet" href="jquery-ui.css">
+	<style>
+	  <!--body {
+	    font-family: Arial, Verdana, sans-serif;
+	    font-size: 13px;
+	  }-->
+    .ui-autocomplete {
+      padding: 0;
+      list-style: none;
+      background-color: #fff;
+      width: 218px;
+      border: 1px solid #B0BECA;
+      max-height: 350px;
+      overflow-x: hidden;
+    }
+    .ui-autocomplete .ui-menu-item {
+      border-top: 1px solid #B0BECA;
+      display: block;
+      padding: 4px 6px;
+      color: #353D44;
+      cursor: pointer;
+    }
+    .ui-autocomplete .ui-menu-item:first-child {
+      border-top: none;
+    }
+    .ui-autocomplete .ui-menu-item.ui-state-focus {
+      background-color: #D5E5F4;
+      color: #161A1C;
+    }
+	</style>
+	
+	<!--Input Mask Script-->
+	<script>
+		jQuery(function($){
+		   $("#phonemask").mask("(999) 999-9999");  
+		   $("#phonemask2").mask("(999) 999-9999");
+		   $("#phonemask3").mask("(999) 999-9999");
+		   $("#phonemask4").mask("(999) 999-9999");
+		});
+	</script>
+	
+	<!--Datepicker Script-->
+	<script>
+		$(function() {
+			$('#popupDatepicker').datepick();
+			$('#popupDatepicker2').datepick();
+			$('#popupDatepicker3').datepick();
+			$('#popupDatepicker4').datepick();
+			$('#popupDatepicker5').datepick();
+			$('#popupDatepicker6').datepick();
+		});
+	</script>
+	
+	<!-- Toggle Function to Hide/Display Specific Elements of Form -->	
+		<script>
+			$(document).ready(function(){
+				$("#addresschange").click(function(){
+					$("#newaddress").toggle();
+				});
+				$("#phonechange").click(function(){
+					$("#newphone").toggle();
+				});
+				$("#emergencycontactchange").click(function(){
+					$("#newemergencycontact").toggle();
+				});
+				$("#yes_other_college").click(function(){
+					$("#yes_other_college2").toggle();
+				});
+				$("#no_other_college").click(function(){
+					$("#yes_other_college2").hide();
+				});
+				$("#yes_medical").click(function(){
+					$("#medical").toggle();
+				});
+				$("#no_medical").click(function(){
+					$("#medical").hide();
+				});
+				$("#no_USCitizen").click(function(){
+					$("#notUSCitizen").toggle();
+				});
+				$("#undergraduate").click(function(){
+					$("#undergraduateGPAReq").toggle();
+					$("#graduateGPAReq").hide();
+				});
+				$("#graduate").click(function(){
+					$("#graduateGPAReq").toggle();
+					$("#undergraduateGPAReq").hide();
+				});
+			});
+		</script>
+     
+  </head>
+  
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        Resumption of Studies Application
+      </div>
+       
+<span style="padding-left:10px;">| 
+<a href="https://appsrv.pace.edu/osa/login/logout.cfm" target="new">Logout</a> |</span>
+
+      <form id="mainform" method="post"  enctype="multipart/form-data" 
+      
+
+       
+      
+      action="veterans_process.cfm"       	
+
+
+>
+     <style>
+	p{padding-top:20px;padding-bottom:20px}
+	strong{font-weight:bold}
+	hr{color: #fefefe; 
+	background-color: #fefefe; opacity:50%;;
+	height: 1px;
+	margin-top:30px;margin-bottom:10px}
+	 </style> 
+
+
+
+
+<p style="font-size: 1.2em; font-weight: bold">Please complete the form below.</p>
+
+ <span style="color:red;font-size:13px">* Denotes Required Fields</span>
+
+ 
+
+
+<!-- Name + DOB + Email Table -->
+<table border="0" cellpadding="0" cellspacing="5" width="800px" style="font-size: 13px">
+<tr>
+	<td>   
+		<strong>UID:</strong> 
+	</td>
+	<td>
+		  U00912823<input type="hidden" name="student_id" value="U00912823" style="border:0px" onfocus="blur()" />
+	</td>
+	<td>   
+		<strong>Date of Birth: </strong>
+	</td>
+	<td>
+		5/19/1983
+		<input type="hidden" name="DOB" value="5/19/1983" />
+	</td>
+</tr> 
+
+
+<tr>
+	<td>
+	<strong>First name:* </strong>
+	</td>
+	<td>
+	Bryn<input type="hidden" name="first_name" value="Bryn" style="border:0px" onfocus="blur()"/>
+	</td>
+	<td >
+	<strong>Last name:*</strong> 
+	</td>
+	<td >
+	Haffey<input type="hidden" name="last_name" value="Haffey" style="border:0px" onfocus="blur()"/>
+	</td>
+</tr> 
+<tr>
+	<td >   
+	<strong>Email:</strong> 
+	</td>
+	<td >
+		bhaffey@pace.edu<input type="hidden" name="email" value="bhaffey@pace.edu" style="border:0px;padding-right:5px" onfocus="blur()"/>
+	</td>
+	<td >   
+	<strong>Home Campus:*</strong> 
+	</td>
+	<td >
+		NYC<input type="hidden" name="campus" value="NYC" style="border:0px;padding-right:5px" onfocus="blur()"/>
+	</td>
+</tr>
+<tr>
+	<td>   
+	<strong>Level:</strong> 
+	</td>
+	<td >
+		Graduate<input type="hidden" name="level" value="Graduate" style="border:0px;padding-right:5px" onfocus="blur()"/>
+	</td>
+	<td >   
+		<strong>Ethnicity:</strong> 
+	</td>
+	<td >
+		Caucasian<input type="hidden" name="ethnicity" value="Caucasian" style="border:0px;padding-right:5px" onfocus="blur()"/>
+	</td>
+</tr>
+<tr>
+	<td >   
+	<strong>Marital Status:</strong> 
+	</td>
+	<td >
+		Single<input type="hidden" name="maritalStatus" value="single" style="border:0px;padding-right:5px" onfocus="blur()"/>
+	</td>
+	<td >   
+	<strong>Sex:</strong> 
+	</td>
+	<td >
+		F<input type="hidden" name="sex" value="F" style="border:0px;padding-right:5px" onfocus="blur()"/>
+	</td>
+</tr>
+<tr>
+	<td >   
+	<strong>Major:*</strong> 
+	</td>
+	<td >
+		Computer Science<input type="hidden" name="major" value="ComputerScience" style="border:0px;padding-right:5px" onfocus="blur()"/>
+	</td>
+	<td >   
+	<strong>Degree:</strong> 
+	</td>
+	<td >
+		Master's<input type="hidden" name="Masters" value="F" style="border:0px;padding-right:5px" onfocus="blur()"/>
+	</td>
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+
+<tr>
+<td>   
+<strong>Street Address 1: </strong>
+</td>
+<td>123 Main Street<input type="hidden" name="Street1" value="123 Main Street" />
+</td>
+<td>   
+<strong>Street Address 2: </strong>
+</td>
+<td>
+
+Apartment 3
+<input type="hidden" name="Street2" value="Apartment 3" />
+
+</td>
+</tr>
+
+<tr>
+<td>   
+<strong>City: </strong>
+</td>
+<td>
+
+Brooklyn
+<input type="hidden" name="City" value="Brooklyn" />
+
+</td>
+
+<td>   
+<strong>State: </strong>
+</td>
+<td>
+
+NY
+<input type="hidden" name="State" value="NY" />
+
+</td>
+</tr>
+
+<tr>
+<td>   
+<strong>Zip: </strong>
+</td>
+<td >
+
+11238
+<input type="hidden" name="Zip" value="11238" />
+
+</td>
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+<td>   
+<strong>Day Telephone Number: </strong>
+</td>
+<td>
+212-999-9999
+<input type="hidden" name="DayPhone" value="212-999-9999" />
+
+</td>
+<td>   
+<strong>Evening Telephone Number: </strong>
+</td>
+<td>
+212-998-9999
+<input type="hidden" name="EveningPhone" value="212-998-9999" />
+
+</td>
+</tr>
+
+<tr>
+<td>   
+<strong>Cell Phone Number: </strong>
+</td>
+<td>
+212-998-8999
+<input type="hidden" name="CellPhone" value="212-998-8999" />
+
+</td>
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+
+<tr>
+<td>   
+<strong>Emergency Contact Name: </strong>
+</td>
+<td>
+Debra Haffey
+<input type="hidden" name="EmergencyContactName" value="Debra Haffey" />
+
+</td>
+<td>   
+<strong>Emergency Contact Relationship: </strong>
+</td>
+<td>
+Mother
+<input type="hidden" name="EmergencyContactRelationship" value="Mother" />
+
+</td>
+</tr>
+
+<tr>
+<td>   
+<strong>Emergency Contact Number: </strong>
+</td>
+<td>
+347-999-9999
+<input type="hidden" name="EmergencyContactNumber" value="347-999-9999" />
+
+</td>
+</tr>
+<tr>
+&nbsp;
+</tr>
+<tr>
+&nbsp;
+</tr>
+</table> 
+
+<input type="checkbox" id="addresschange" >Click here if you need to enter a new <strong>address</strong> <br>
+<!--New Address Entry -->
+<div id="newaddress" style="display: none">
+	<table width="850px">
+<tr>
+&nbsp;
+</tr>
+		<tr>
+			<td>   
+			<strong>Street Address 1: </strong>
+			</td>
+			<td><input type="text" name="Street1" value="" size="40"/>
+			</td>
+			<td>   
+			<strong>Street Address 2: </strong>
+			</td>
+			<td>
+
+			<input type="text" name="Street2" value="" size="40" />
+
+			</td>
+		</tr>
+		<tr>
+			<td>   
+			<strong>City: </strong>
+			</td>
+			<td>
+			<input type="text" name="City" value="" size="40"/>
+			</td>
+
+			<td>   
+			<strong>State: </strong>
+			</td>
+			<td>
+			<select>
+	<option value="AL">Alabama</option>
+	<option value="AK">Alaska</option>
+	<option value="AZ">Arizona</option>
+	<option value="AR">Arkansas</option>
+	<option value="CA">California</option>
+	<option value="CO">Colorado</option>
+	<option value="CT">Connecticut</option>
+	<option value="DE">Delaware</option>
+	<option value="DC">District Of Columbia</option>
+	<option value="FL">Florida</option>
+	<option value="GA">Georgia</option>
+	<option value="HI">Hawaii</option>
+	<option value="ID">Idaho</option>
+	<option value="IL">Illinois</option>
+	<option value="IN">Indiana</option>
+	<option value="IA">Iowa</option>
+	<option value="KS">Kansas</option>
+	<option value="KY">Kentucky</option>
+	<option value="LA">Louisiana</option>
+	<option value="ME">Maine</option>
+	<option value="MD">Maryland</option>
+	<option value="MA">Massachusetts</option>
+	<option value="MI">Michigan</option>
+	<option value="MN">Minnesota</option>
+	<option value="MS">Mississippi</option>
+	<option value="MO">Missouri</option>
+	<option value="MT">Montana</option>
+	<option value="NE">Nebraska</option>
+	<option value="NV">Nevada</option>
+	<option value="NH">New Hampshire</option>
+	<option value="NJ">New Jersey</option>
+	<option value="NM">New Mexico</option>
+	<option value="NY">New York</option>
+	<option value="NC">North Carolina</option>
+	<option value="ND">North Dakota</option>
+	<option value="OH">Ohio</option>
+	<option value="OK">Oklahoma</option>
+	<option value="OR">Oregon</option>
+	<option value="PA">Pennsylvania</option>
+	<option value="RI">Rhode Island</option>
+	<option value="SC">South Carolina</option>
+	<option value="SD">South Dakota</option>
+	<option value="TN">Tennessee</option>
+	<option value="TX">Texas</option>
+	<option value="UT">Utah</option>
+	<option value="VT">Vermont</option>
+	<option value="VA">Virginia</option>
+	<option value="WA">Washington</option>
+	<option value="WV">West Virginia</option>
+	<option value="WI">Wisconsin</option>
+	<option value="WY">Wyoming</option>
+</select>			
+			</td>
+		</tr>
+		<tr>
+			<td>   
+			<strong>Zip: </strong>
+			</td>
+			<td >
+			<input type="text" name="Zip" value="" />
+			</td>
+		</tr>
+		<tr>
+<td>&nbsp;</td>
+</tr>
+</tr>
+	</table>
+</div>
+
+<input type="checkbox" id="phonechange" >Click here if you need to enter new <strong>phone numbers</strong><br>
+<!--New Phone Entry -->
+<div id="newphone" style="display: none">
+	<table width="850px">
+	<tr>
+&nbsp;
+</tr>
+		<tr>
+			<td>   
+			<strong>Day Telephone Number: </strong>
+			</td>
+			<td>
+			<input id="phonemask" type="text" name="DayPhone" value="" />
+
+			</td>
+			<td>   
+			<strong>Evening Telephone Number: </strong>
+			</td>
+			<td>
+			<input id="phonemask2" type="text" name="EveningPhone" value="" />
+			</td>
+		</tr>
+
+		<tr>
+			<td>   
+			<strong>Cell Phone Number: </strong>
+			</td>
+			<td>
+			<input id="phonemask3" type="text" name="CellPhone" value="" />
+			</td>
+		</tr>
+		<tr>
+<td>&nbsp;</td>
+</tr>
+	</table>
+</div>
+
+<input type="checkbox" id="emergencycontactchange" >Click here if you need to enter a new <strong>emergency contact</strong><br>
+<!--New Emergency Contact Entry -->
+<div id="newemergencycontact" style="display: none">
+<table width="850px">
+<tr>
+&nbsp;
+</tr>
+<tr>
+<td>   
+<strong>Emergency Contact Name: </strong>
+</td>
+<td>
+<input type="text" name="EmergencyContactName"/>
+
+</td>
+<td>   
+<strong>Emergency Contact Relationship: </strong>
+</td>
+<td>
+<input type="text" name="EmergencyContactRelationship" value="" />
+</td>
+</tr>
+<tr>
+<td>   
+<strong>Emergency Contact Number: </strong>
+</td>
+<td>
+<input id="phonemask4" type="text" name="EmergencyContactNumber" value="" />
+</td>
+</tr>
+		<tr>
+<td>&nbsp;</td>
+</tr>
+
+</table> 
+</div>
+
+<p><strong>**<u>NOTE</u>: The <i>official name</i> on your Pace record cannot be changed using this form.  To do so, please complete a 
+<a href="http://www.pace.edu/office-student-assistance/sites/pace.edu.office-student-assistance/files/forms/New%20General%20Change%20Form.pdf" target="_blank">
+General Change Form</a>.  In addition,
+the <i>home campus</i> cannot be changed on this form.  To do so, please complete a <a href="https://appsrv.pace.edu/osa/programs/forms/changeCampus.cfm" target="_blank">
+Change of Home Campus Application</a>.  If you are seeking to change your major
+upon resuming, please speak to your academic advisor for approval. </strong>
+</p>
+
+<hr>
+
+<div>
+<span style="color:red;font-weight:bold;">*</span> 
+<strong>Are you a U.S. Citizen?</strong><br>
+<div style="margin-left: 60px">
+	<input type="radio" name="USCitizen" value="Yes" checked>Yes<br>
+	<input type="radio" id="no_USCitizen" name="USCitizen" value="No">No<br><br>
+</div>
+	
+	<div id="notUSCitizen" style="display:none">
+	If you are <i>not</i> a U.S. citizen, please indicate:
+	<table width="800px" style="margin-left: 60px">
+		<tr>
+			<td>
+				<span style="color:red;font-weight:bold;">*</span><strong>Country of Birth:</strong></br>
+				<div>
+				
+				 <select name="Country" id="country-selector" autofocus="autofocus" autocorrect="off" autocomplete="off">
+      <option value="" selected="selected">Select Country</option>
+      <option value="Afghanistan" data-alternative-spellings="AF افغانستان">Afghanistan</option>
+      <option value="Åland Islands" data-alternative-spellings="AX Aaland Aland" data-relevancy-booster="0.5">Åland Islands</option>
+      <option value="Albania" data-alternative-spellings="AL">Albania</option>
+      <option value="Algeria" data-alternative-spellings="DZ الجزائر">Algeria</option>
+      <option value="American Samoa" data-alternative-spellings="AS" data-relevancy-booster="0.5">American Samoa</option>
+      <option value="Andorra" data-alternative-spellings="AD" data-relevancy-booster="0.5">Andorra</option>
+      <option value="Angola" data-alternative-spellings="AO">Angola</option>
+      <option value="Anguilla" data-alternative-spellings="AI" data-relevancy-booster="0.5">Anguilla</option>
+      <option value="Antarctica" data-alternative-spellings="AQ" data-relevancy-booster="0.5">Antarctica</option>
+      <option value="Antigua And Barbuda" data-alternative-spellings="AG" data-relevancy-booster="0.5">Antigua And Barbuda</option>
+      <option value="Argentina" data-alternative-spellings="AR">Argentina</option>
+      <option value="Armenia" data-alternative-spellings="AM Հայաստան">Armenia</option>
+      <option value="Aruba" data-alternative-spellings="AW" data-relevancy-booster="0.5">Aruba</option>
+      <option value="Australia" data-alternative-spellings="AU" data-relevancy-booster="1.5">Australia</option>
+      <option value="Austria" data-alternative-spellings="AT Österreich Osterreich Oesterreich ">Austria</option>
+      <option value="Azerbaijan" data-alternative-spellings="AZ">Azerbaijan</option>
+      <option value="Bahamas" data-alternative-spellings="BS">Bahamas</option>
+      <option value="Bahrain" data-alternative-spellings="BH البحرين">Bahrain</option>
+      <option value="Bangladesh" data-alternative-spellings="BD বাংলাদেশ" data-relevancy-booster="2">Bangladesh</option>
+      <option value="Barbados" data-alternative-spellings="BB">Barbados</option>
+      <option value="Belarus" data-alternative-spellings="BY Беларусь">Belarus</option>
+      <option value="Belgium" data-alternative-spellings="BE België Belgie Belgien Belgique" data-relevancy-booster="1.5">Belgium</option>
+      <option value="Belize" data-alternative-spellings="BZ">Belize</option>
+      <option value="Benin" data-alternative-spellings="BJ">Benin</option>
+      <option value="Bermuda" data-alternative-spellings="BM" data-relevancy-booster="0.5">Bermuda</option>
+      <option value="Bhutan" data-alternative-spellings="BT भूटान">Bhutan</option>
+      <option value="Bolivia" data-alternative-spellings="BO">Bolivia</option>
+      <option value="Bonaire, Sint Eustatius and Saba" data-alternative-spellings="BQ">Bonaire, Sint Eustatius and Saba</option>
+      <option value="Bosnia and Herzegovina" data-alternative-spellings="BA BiH Bosna i Hercegovina Босна и Херцеговина">Bosnia and Herzegovina</option>
+      <option value="Botswana" data-alternative-spellings="BW">Botswana</option>
+      <option value="Bouvet Island" data-alternative-spellings="BV">Bouvet Island</option>
+      <option value="Brazil" data-alternative-spellings="BR Brasil" data-relevancy-booster="2">Brazil</option>
+      <option value="British Indian Ocean Territory" data-alternative-spellings="IO">British Indian Ocean Territory</option>
+      <option value="Brunei Darussalam" data-alternative-spellings="BN">Brunei Darussalam</option>
+      <option value="Bulgaria" data-alternative-spellings="BG България">Bulgaria</option>
+      <option value="Burkina Faso" data-alternative-spellings="BF">Burkina Faso</option>
+      <option value="Burundi" data-alternative-spellings="BI">Burundi</option>
+      <option value="Cambodia" data-alternative-spellings="KH កម្ពុជា">Cambodia</option>
+      <option value="Cameroon" data-alternative-spellings="CM">Cameroon</option>
+      <option value="Canada" data-alternative-spellings="CA" data-relevancy-booster="2">Canada</option>
+      <option value="Cape Verde" data-alternative-spellings="CV Cabo">Cape Verde</option>
+      <option value="Cayman Islands" data-alternative-spellings="KY" data-relevancy-booster="0.5">Cayman Islands</option>
+      <option value="Central African Republic" data-alternative-spellings="CF">Central African Republic</option>
+      <option value="Chad" data-alternative-spellings="TD تشاد‎ Tchad">Chad</option>
+      <option value="Chile" data-alternative-spellings="CL">Chile</option>
+      <option value="China" data-relevancy-booster="3.5" data-alternative-spellings="CN Zhongguo Zhonghua Peoples Republic 中国/中华">China</option>
+      <option value="Christmas Island" data-alternative-spellings="CX" data-relevancy-booster="0.5">Christmas Island</option>
+      <option value="Cocos (Keeling) Islands" data-alternative-spellings="CC" data-relevancy-booster="0.5">Cocos (Keeling) Islands</option>
+      <option value="Colombia" data-alternative-spellings="CO">Colombia</option>
+      <option value="Comoros" data-alternative-spellings="KM جزر القمر">Comoros</option>
+      <option value="Congo" data-alternative-spellings="CG">Congo</option>
+      <option value="Congo, the Democratic Republic of the" data-alternative-spellings="CD Congo-Brazzaville Repubilika ya Kongo">Congo, the Democratic Republic of the</option>
+      <option value="Cook Islands" data-alternative-spellings="CK" data-relevancy-booster="0.5">Cook Islands</option>
+      <option value="Costa Rica" data-alternative-spellings="CR">Costa Rica</option>
+      <option value="Côte d'Ivoire" data-alternative-spellings="CI Cote dIvoire">Côte d'Ivoire</option>
+      <option value="Croatia" data-alternative-spellings="HR Hrvatska">Croatia</option>
+      <option value="Cuba" data-alternative-spellings="CU">Cuba</option>
+      <option value="Curaçao" data-alternative-spellings="CW Curacao">Curaçao</option>
+      <option value="Cyprus" data-alternative-spellings="CY Κύπρος Kýpros Kıbrıs">Cyprus</option>
+      <option value="Czech Republic" data-alternative-spellings="CZ Česká Ceska">Czech Republic</option>
+      <option value="Denmark" data-alternative-spellings="DK Danmark" data-relevancy-booster="1.5">Denmark</option>
+      <option value="Djibouti" data-alternative-spellings="DJ جيبوتي‎ Jabuuti Gabuuti">Djibouti</option>
+      <option value="Dominica" data-alternative-spellings="DM Dominique" data-relevancy-booster="0.5">Dominica</option>
+      <option value="Dominican Republic" data-alternative-spellings="DO">Dominican Republic</option>
+      <option value="Ecuador" data-alternative-spellings="EC">Ecuador</option>
+      <option value="Egypt" data-alternative-spellings="EG" data-relevancy-booster="1.5">Egypt</option>
+      <option value="El Salvador" data-alternative-spellings="SV">El Salvador</option>
+      <option value="Equatorial Guinea" data-alternative-spellings="GQ">Equatorial Guinea</option>
+      <option value="Eritrea" data-alternative-spellings="ER إرتريا ኤርትራ">Eritrea</option>
+      <option value="Estonia" data-alternative-spellings="EE Eesti">Estonia</option>
+      <option value="Ethiopia" data-alternative-spellings="ET ኢትዮጵያ">Ethiopia</option>
+      <option value="Falkland Islands (Malvinas)" data-alternative-spellings="FK" data-relevancy-booster="0.5">Falkland Islands (Malvinas)</option>
+      <option value="Faroe Islands" data-alternative-spellings="FO Føroyar Færøerne" data-relevancy-booster="0.5">Faroe Islands</option>
+      <option value="Fiji" data-alternative-spellings="FJ Viti फ़िजी">Fiji</option>
+      <option value="Finland" data-alternative-spellings="FI Suomi">Finland</option>
+      <option value="France" data-alternative-spellings="FR République française" data-relevancy-booster="2.5">France</option>
+      <option value="French Guiana" data-alternative-spellings="GF">French Guiana</option>
+      <option value="French Polynesia" data-alternative-spellings="PF Polynésie française">French Polynesia</option>
+      <option value="French Southern Territories" data-alternative-spellings="TF">French Southern Territories</option>
+      <option value="Gabon" data-alternative-spellings="GA République Gabonaise">Gabon</option>
+      <option value="Gambia" data-alternative-spellings="GM">Gambia</option>
+      <option value="Georgia" data-alternative-spellings="GE საქართველო">Georgia</option>
+      <option value="Germany" data-alternative-spellings="DE Bundesrepublik Deutschland" data-relevancy-booster="3">Germany</option>
+      <option value="Ghana" data-alternative-spellings="GH">Ghana</option>
+      <option value="Gibraltar" data-alternative-spellings="GI" data-relevancy-booster="0.5">Gibraltar</option>
+      <option value="Greece" data-alternative-spellings="GR Ελλάδα" data-relevancy-booster="1.5">Greece</option>
+      <option value="Greenland" data-alternative-spellings="GL grønland" data-relevancy-booster="0.5">Greenland</option>
+      <option value="Grenada" data-alternative-spellings="GD">Grenada</option>
+      <option value="Guadeloupe" data-alternative-spellings="GP">Guadeloupe</option>
+      <option value="Guam" data-alternative-spellings="GU">Guam</option>
+      <option value="Guatemala" data-alternative-spellings="GT">Guatemala</option>
+      <option value="Guernsey" data-alternative-spellings="GG" data-relevancy-booster="0.5">Guernsey</option>
+      <option value="Guinea" data-alternative-spellings="GN">Guinea</option>
+      <option value="Guinea-Bissau" data-alternative-spellings="GW">Guinea-Bissau</option>
+      <option value="Guyana" data-alternative-spellings="GY">Guyana</option>
+      <option value="Haiti" data-alternative-spellings="HT">Haiti</option>
+      <option value="Heard Island and McDonald Islands" data-alternative-spellings="HM">Heard Island and McDonald Islands</option>
+      <option value="Holy See (Vatican City State)" data-alternative-spellings="VA" data-relevancy-booster="0.5">Holy See (Vatican City State)</option>
+      <option value="Honduras" data-alternative-spellings="HN">Honduras</option>
+      <option value="Hong Kong" data-alternative-spellings="HK 香港">Hong Kong</option>
+      <option value="Hungary" data-alternative-spellings="HU Magyarország">Hungary</option>
+      <option value="Iceland" data-alternative-spellings="IS Island">Iceland</option>
+      <option value="India" data-alternative-spellings="IN भारत गणराज्य Hindustan" data-relevancy-booster="3">India</option>
+      <option value="Indonesia" data-alternative-spellings="ID" data-relevancy-booster="2">Indonesia</option>
+      <option value="Iran, Islamic Republic of" data-alternative-spellings="IR ایران">Iran, Islamic Republic of</option>
+      <option value="Iraq" data-alternative-spellings="IQ العراق‎">Iraq</option>
+      <option value="Ireland" data-alternative-spellings="IE Éire" data-relevancy-booster="1.2">Ireland</option>
+      <option value="Isle of Man" data-alternative-spellings="IM" data-relevancy-booster="0.5">Isle of Man</option>
+      <option value="Israel" data-alternative-spellings="IL إسرائيل ישראל">Israel</option>
+      <option value="Italy" data-alternative-spellings="IT Italia" data-relevancy-booster="2">Italy</option>
+      <option value="Jamaica" data-alternative-spellings="JM">Jamaica</option>
+      <option value="Japan" data-alternative-spellings="JP Nippon Nihon 日本" data-relevancy-booster="2.5">Japan</option>
+      <option value="Jersey" data-alternative-spellings="JE" data-relevancy-booster="0.5">Jersey</option>
+      <option value="Jordan" data-alternative-spellings="JO الأردن">Jordan</option>
+      <option value="Kazakhstan" data-alternative-spellings="KZ Қазақстан Казахстан">Kazakhstan</option>
+      <option value="Kenya" data-alternative-spellings="KE">Kenya</option>
+      <option value="Kiribati" data-alternative-spellings="KI">Kiribati</option>
+      <option value="Korea, Democratic People's Republic of" data-alternative-spellings="KP North Korea">Korea, Democratic People's Republic of</option>
+      <option value="Korea, Republic of" data-alternative-spellings="KR South Korea" data-relevancy-booster="1.5">Korea, Republic of</option>
+      <option value="Kuwait" data-alternative-spellings="KW الكويت">Kuwait</option>
+      <option value="Kyrgyzstan" data-alternative-spellings="KG Кыргызстан">Kyrgyzstan</option>
+      <option value="Lao People's Democratic Republic" data-alternative-spellings="LA">Lao People's Democratic Republic</option>
+      <option value="Latvia" data-alternative-spellings="LV Latvija">Latvia</option>
+      <option value="Lebanon" data-alternative-spellings="LB لبنان">Lebanon</option>
+      <option value="Lesotho" data-alternative-spellings="LS">Lesotho</option>
+      <option value="Liberia" data-alternative-spellings="LR">Liberia</option>
+      <option value="Libyan Arab Jamahiriya" data-alternative-spellings="LY ليبيا">Libyan Arab Jamahiriya</option>
+      <option value="Liechtenstein" data-alternative-spellings="LI">Liechtenstein</option>
+      <option value="Lithuania" data-alternative-spellings="LT Lietuva">Lithuania</option>
+      <option value="Luxembourg" data-alternative-spellings="LU">Luxembourg</option>
+      <option value="Macao" data-alternative-spellings="MO">Macao</option>
+      <option value="Macedonia, The Former Yugoslav Republic Of" data-alternative-spellings="MK Македонија">Macedonia, The Former Yugoslav Republic Of</option>
+      <option value="Madagascar" data-alternative-spellings="MG Madagasikara">Madagascar</option>
+      <option value="Malawi" data-alternative-spellings="MW">Malawi</option>
+      <option value="Malaysia" data-alternative-spellings="MY">Malaysia</option>
+      <option value="Maldives" data-alternative-spellings="MV">Maldives</option>
+      <option value="Mali" data-alternative-spellings="ML">Mali</option>
+      <option value="Malta" data-alternative-spellings="MT">Malta</option>
+      <option value="Marshall Islands" data-alternative-spellings="MH" data-relevancy-booster="0.5">Marshall Islands</option>
+      <option value="Martinique" data-alternative-spellings="MQ">Martinique</option>
+      <option value="Mauritania" data-alternative-spellings="MR الموريتانية">Mauritania</option>
+      <option value="Mauritius" data-alternative-spellings="MU">Mauritius</option>
+      <option value="Mayotte" data-alternative-spellings="YT">Mayotte</option>
+      <option value="Mexico" data-alternative-spellings="MX Mexicanos" data-relevancy-booster="1.5">Mexico</option>
+      <option value="Micronesia, Federated States of" data-alternative-spellings="FM">Micronesia, Federated States of</option>
+      <option value="Moldova, Republic of" data-alternative-spellings="MD">Moldova, Republic of</option>
+      <option value="Monaco" data-alternative-spellings="MC">Monaco</option>
+      <option value="Mongolia" data-alternative-spellings="MN Mongγol ulus Монгол улс">Mongolia</option>
+      <option value="Montenegro" data-alternative-spellings="ME">Montenegro</option>
+      <option value="Montserrat" data-alternative-spellings="MS" data-relevancy-booster="0.5">Montserrat</option>
+      <option value="Morocco" data-alternative-spellings="MA المغرب">Morocco</option>
+      <option value="Mozambique" data-alternative-spellings="MZ Moçambique">Mozambique</option>
+      <option value="Myanmar" data-alternative-spellings="MM">Myanmar</option>
+      <option value="Namibia" data-alternative-spellings="NA Namibië">Namibia</option>
+      <option value="Nauru" data-alternative-spellings="NR Naoero" data-relevancy-booster="0.5">Nauru</option>
+      <option value="Nepal" data-alternative-spellings="NP नेपाल">Nepal</option>
+      <option value="Netherlands" data-alternative-spellings="NL Holland Nederland" data-relevancy-booster="1.5">Netherlands</option>
+      <option value="New Caledonia" data-alternative-spellings="NC" data-relevancy-booster="0.5">New Caledonia</option>
+      <option value="New Zealand" data-alternative-spellings="NZ Aotearoa">New Zealand</option>
+      <option value="Nicaragua" data-alternative-spellings="NI">Nicaragua</option>
+      <option value="Niger" data-alternative-spellings="NE Nijar">Niger</option>
+      <option value="Nigeria" data-alternative-spellings="NG Nijeriya Naíjíríà" data-relevancy-booster="1.5">Nigeria</option>
+      <option value="Niue" data-alternative-spellings="NU" data-relevancy-booster="0.5">Niue</option>
+      <option value="Norfolk Island" data-alternative-spellings="NF" data-relevancy-booster="0.5">Norfolk Island</option>
+      <option value="Northern Mariana Islands" data-alternative-spellings="MP" data-relevancy-booster="0.5">Northern Mariana Islands</option>
+      <option value="Norway" data-alternative-spellings="NO Norge Noreg" data-relevancy-booster="1.5">Norway</option>
+      <option value="Oman" data-alternative-spellings="OM عمان">Oman</option>
+      <option value="Pakistan" data-alternative-spellings="PK پاکستان" data-relevancy-booster="2">Pakistan</option>
+      <option value="Palau" data-alternative-spellings="PW" data-relevancy-booster="0.5">Palau</option>
+      <option value="Palestinian Territory, Occupied" data-alternative-spellings="PS فلسطين">Palestinian Territory, Occupied</option>
+      <option value="Panama" data-alternative-spellings="PA">Panama</option>
+      <option value="Papua New Guinea" data-alternative-spellings="PG">Papua New Guinea</option>
+      <option value="Paraguay" data-alternative-spellings="PY">Paraguay</option>
+      <option value="Peru" data-alternative-spellings="PE">Peru</option>
+      <option value="Philippines" data-alternative-spellings="PH Pilipinas" data-relevancy-booster="1.5">Philippines</option>
+      <option value="Pitcairn" data-alternative-spellings="PN" data-relevancy-booster="0.5">Pitcairn</option>
+      <option value="Poland" data-alternative-spellings="PL Polska" data-relevancy-booster="1.25">Poland</option>
+      <option value="Portugal" data-alternative-spellings="PT Portuguesa" data-relevancy-booster="1.5">Portugal</option>
+      <option value="Puerto Rico" data-alternative-spellings="PR">Puerto Rico</option>
+      <option value="Qatar" data-alternative-spellings="QA قطر">Qatar</option>
+      <option value="Réunion" data-alternative-spellings="RE Reunion">Réunion</option>
+      <option value="Romania" data-alternative-spellings="RO Rumania Roumania România">Romania</option>
+      <option value="Russian Federation" data-alternative-spellings="RU Rossiya Российская Россия" data-relevancy-booster="2.5">Russian Federation</option>
+      <option value="Rwanda" data-alternative-spellings="RW">Rwanda</option>
+      <option value="Saint Barthélemy" data-alternative-spellings="BL St. Barthelemy">Saint Barthélemy</option>
+      <option value="Saint Helena" data-alternative-spellings="SH St.">Saint Helena</option>
+      <option value="Saint Kitts and Nevis" data-alternative-spellings="KN St.">Saint Kitts and Nevis</option>
+      <option value="Saint Lucia" data-alternative-spellings="LC St.">Saint Lucia</option>
+      <option value="Saint Martin (French Part)" data-alternative-spellings="MF St.">Saint Martin (French Part)</option>
+      <option value="Saint Pierre and Miquelon" data-alternative-spellings="PM St.">Saint Pierre and Miquelon</option>
+      <option value="Saint Vincent and the Grenadines" data-alternative-spellings="VC St.">Saint Vincent and the Grenadines</option>
+      <option value="Samoa" data-alternative-spellings="WS">Samoa</option>
+      <option value="San Marino" data-alternative-spellings="SM RSM Repubblica">San Marino</option>
+      <option value="Sao Tome and Principe" data-alternative-spellings="ST">Sao Tome and Principe</option>
+      <option value="Saudi Arabia" data-alternative-spellings="SA السعودية">Saudi Arabia</option>
+      <option value="Senegal" data-alternative-spellings="SN Sénégal">Senegal</option>
+      <option value="Serbia" data-alternative-spellings="RS Србија Srbija">Serbia</option>
+      <option value="Seychelles" data-alternative-spellings="SC" data-relevancy-booster="0.5">Seychelles</option>
+      <option value="Sierra Leone" data-alternative-spellings="SL">Sierra Leone</option>
+      <option value="Singapore" data-alternative-spellings="SG Singapura  சிங்கப்பூர் குடியரசு 新加坡共和国">Singapore</option>
+      <option value="Sint Maarten (Dutch Part)" data-alternative-spellings="SX">Sint Maarten (Dutch Part)</option>
+      <option value="Slovakia" data-alternative-spellings="SK Slovenská Slovensko">Slovakia</option>
+      <option value="Slovenia" data-alternative-spellings="SI Slovenija">Slovenia</option>
+      <option value="Solomon Islands" data-alternative-spellings="SB">Solomon Islands</option>
+      <option value="Somalia" data-alternative-spellings="SO الصومال">Somalia</option>
+      <option value="South Africa" data-alternative-spellings="ZA RSA Suid-Afrika">South Africa</option>
+      <option value="South Georgia and the South Sandwich Islands" data-alternative-spellings="GS">South Georgia and the South Sandwich Islands</option>
+      <option value="South Sudan" data-alternative-spellings="SS">South Sudan</option>
+      <option value="Spain" data-alternative-spellings="ES España" data-relevancy-booster="2">Spain</option>
+      <option value="Sri Lanka" data-alternative-spellings="LK ශ්‍රී ලංකා இலங்கை Ceylon">Sri Lanka</option>
+      <option value="Sudan" data-alternative-spellings="SD السودان">Sudan</option>
+      <option value="Suriname" data-alternative-spellings="SR शर्नम् Sarnam Sranangron">Suriname</option>
+      <option value="Svalbard and Jan Mayen" data-alternative-spellings="SJ" data-relevancy-booster="0.5">Svalbard and Jan Mayen</option>
+      <option value="Swaziland" data-alternative-spellings="SZ weSwatini Swatini Ngwane">Swaziland</option>
+      <option value="Sweden" data-alternative-spellings="SE Sverige" data-relevancy-booster="1.5">Sweden</option>
+      <option value="Switzerland" data-alternative-spellings="CH Swiss Confederation Schweiz Suisse Svizzera Svizra" data-relevancy-booster="1.5">Switzerland</option>
+      <option value="Syrian Arab Republic" data-alternative-spellings="SY Syria سورية">Syrian Arab Republic</option>
+      <option value="Taiwan, Province of China" data-alternative-spellings="TW 台灣 臺灣">Taiwan, Province of China</option>
+      <option value="Tajikistan" data-alternative-spellings="TJ Тоҷикистон Toçikiston">Tajikistan</option>
+      <option value="Tanzania, United Republic of" data-alternative-spellings="TZ">Tanzania, United Republic of</option>
+      <option value="Thailand" data-alternative-spellings="TH ประเทศไทย Prathet Thai">Thailand</option>
+      <option value="Timor-Leste" data-alternative-spellings="TL">Timor-Leste</option>
+      <option value="Togo" data-alternative-spellings="TG Togolese">Togo</option>
+      <option value="Tokelau" data-alternative-spellings="TK" data-relevancy-booster="0.5">Tokelau</option>
+      <option value="Tonga" data-alternative-spellings="TO">Tonga</option>
+      <option value="Trinidad and Tobago" data-alternative-spellings="TT">Trinidad and Tobago</option>
+      <option value="Tunisia" data-alternative-spellings="TN تونس">Tunisia</option>
+      <option value="Turkey" data-alternative-spellings="TR Türkiye Turkiye">Turkey</option>
+      <option value="Turkmenistan" data-alternative-spellings="TM Türkmenistan">Turkmenistan</option>
+      <option value="Turks and Caicos Islands" data-alternative-spellings="TC" data-relevancy-booster="0.5">Turks and Caicos Islands</option>
+      <option value="Tuvalu" data-alternative-spellings="TV" data-relevancy-booster="0.5">Tuvalu</option>
+      <option value="Uganda" data-alternative-spellings="UG">Uganda</option>
+      <option value="Ukraine" data-alternative-spellings="UA Ukrayina Україна">Ukraine</option>
+      <option value="United Arab Emirates" data-alternative-spellings="AE UAE الإمارات">United Arab Emirates</option>
+      <option value="United Kingdom" data-alternative-spellings="GB Great Britain England UK Wales Scotland Northern Ireland" data-relevancy-booster="2.5">United Kingdom</option>
+      <option value="United States" data-relevancy-booster="3.5" data-alternative-spellings="US USA United States of America">United States</option>
+      <option value="United States Minor Outlying Islands" data-alternative-spellings="UM">United States Minor Outlying Islands</option>
+      <option value="Uruguay" data-alternative-spellings="UY">Uruguay</option>
+      <option value="Uzbekistan" data-alternative-spellings="UZ Ўзбекистон O'zbekstan O‘zbekiston">Uzbekistan</option>
+      <option value="Vanuatu" data-alternative-spellings="VU">Vanuatu</option>
+      <option value="Venezuela" data-alternative-spellings="VE">Venezuela</option>
+      <option value="Vietnam" data-alternative-spellings="VN Việt Nam" data-relevancy-booster="1.5">Vietnam</option>
+      <option value="Virgin Islands, British" data-alternative-spellings="VG" data-relevancy-booster="0.5">Virgin Islands, British</option>
+      <option value="Virgin Islands, U.S." data-alternative-spellings="VI" data-relevancy-booster="0.5">Virgin Islands, U.S.</option>
+      <option value="Wallis and Futuna" data-alternative-spellings="WF" data-relevancy-booster="0.5">Wallis and Futuna</option>
+      <option value="Western Sahara" data-alternative-spellings="EH لصحراء الغربية">Western Sahara</option>
+      <option value="Yemen" data-alternative-spellings="YE اليمن">Yemen</option>
+      <option value="Zambia" data-alternative-spellings="ZM">Zambia</option>
+      <option value="Zimbabwe" data-alternative-spellings="ZW">Zimbabwe</option>
+    </select>
+    
+				
+				</div>
+				
+			</td>
+			<td>
+				<span style="color:red;font-weight:bold;">*</span><strong>Country of Citizenship:</strong></br>
+			<div>
+			
+			<select name="Country" id="country-selector2" autofocus="autofocus" autocorrect="off" autocomplete="off">
+      <option value="" selected="selected">Select Country</option>
+      <option value="Afghanistan" data-alternative-spellings="AF افغانستان">Afghanistan</option>
+      <option value="Åland Islands" data-alternative-spellings="AX Aaland Aland" data-relevancy-booster="0.5">Åland Islands</option>
+      <option value="Albania" data-alternative-spellings="AL">Albania</option>
+      <option value="Algeria" data-alternative-spellings="DZ الجزائر">Algeria</option>
+      <option value="American Samoa" data-alternative-spellings="AS" data-relevancy-booster="0.5">American Samoa</option>
+      <option value="Andorra" data-alternative-spellings="AD" data-relevancy-booster="0.5">Andorra</option>
+      <option value="Angola" data-alternative-spellings="AO">Angola</option>
+      <option value="Anguilla" data-alternative-spellings="AI" data-relevancy-booster="0.5">Anguilla</option>
+      <option value="Antarctica" data-alternative-spellings="AQ" data-relevancy-booster="0.5">Antarctica</option>
+      <option value="Antigua And Barbuda" data-alternative-spellings="AG" data-relevancy-booster="0.5">Antigua And Barbuda</option>
+      <option value="Argentina" data-alternative-spellings="AR">Argentina</option>
+      <option value="Armenia" data-alternative-spellings="AM Հայաստան">Armenia</option>
+      <option value="Aruba" data-alternative-spellings="AW" data-relevancy-booster="0.5">Aruba</option>
+      <option value="Australia" data-alternative-spellings="AU" data-relevancy-booster="1.5">Australia</option>
+      <option value="Austria" data-alternative-spellings="AT Österreich Osterreich Oesterreich ">Austria</option>
+      <option value="Azerbaijan" data-alternative-spellings="AZ">Azerbaijan</option>
+      <option value="Bahamas" data-alternative-spellings="BS">Bahamas</option>
+      <option value="Bahrain" data-alternative-spellings="BH البحرين">Bahrain</option>
+      <option value="Bangladesh" data-alternative-spellings="BD বাংলাদেশ" data-relevancy-booster="2">Bangladesh</option>
+      <option value="Barbados" data-alternative-spellings="BB">Barbados</option>
+      <option value="Belarus" data-alternative-spellings="BY Беларусь">Belarus</option>
+      <option value="Belgium" data-alternative-spellings="BE België Belgie Belgien Belgique" data-relevancy-booster="1.5">Belgium</option>
+      <option value="Belize" data-alternative-spellings="BZ">Belize</option>
+      <option value="Benin" data-alternative-spellings="BJ">Benin</option>
+      <option value="Bermuda" data-alternative-spellings="BM" data-relevancy-booster="0.5">Bermuda</option>
+      <option value="Bhutan" data-alternative-spellings="BT भूटान">Bhutan</option>
+      <option value="Bolivia" data-alternative-spellings="BO">Bolivia</option>
+      <option value="Bonaire, Sint Eustatius and Saba" data-alternative-spellings="BQ">Bonaire, Sint Eustatius and Saba</option>
+      <option value="Bosnia and Herzegovina" data-alternative-spellings="BA BiH Bosna i Hercegovina Босна и Херцеговина">Bosnia and Herzegovina</option>
+      <option value="Botswana" data-alternative-spellings="BW">Botswana</option>
+      <option value="Bouvet Island" data-alternative-spellings="BV">Bouvet Island</option>
+      <option value="Brazil" data-alternative-spellings="BR Brasil" data-relevancy-booster="2">Brazil</option>
+      <option value="British Indian Ocean Territory" data-alternative-spellings="IO">British Indian Ocean Territory</option>
+      <option value="Brunei Darussalam" data-alternative-spellings="BN">Brunei Darussalam</option>
+      <option value="Bulgaria" data-alternative-spellings="BG България">Bulgaria</option>
+      <option value="Burkina Faso" data-alternative-spellings="BF">Burkina Faso</option>
+      <option value="Burundi" data-alternative-spellings="BI">Burundi</option>
+      <option value="Cambodia" data-alternative-spellings="KH កម្ពុជា">Cambodia</option>
+      <option value="Cameroon" data-alternative-spellings="CM">Cameroon</option>
+      <option value="Canada" data-alternative-spellings="CA" data-relevancy-booster="2">Canada</option>
+      <option value="Cape Verde" data-alternative-spellings="CV Cabo">Cape Verde</option>
+      <option value="Cayman Islands" data-alternative-spellings="KY" data-relevancy-booster="0.5">Cayman Islands</option>
+      <option value="Central African Republic" data-alternative-spellings="CF">Central African Republic</option>
+      <option value="Chad" data-alternative-spellings="TD تشاد‎ Tchad">Chad</option>
+      <option value="Chile" data-alternative-spellings="CL">Chile</option>
+      <option value="China" data-relevancy-booster="3.5" data-alternative-spellings="CN Zhongguo Zhonghua Peoples Republic 中国/中华">China</option>
+      <option value="Christmas Island" data-alternative-spellings="CX" data-relevancy-booster="0.5">Christmas Island</option>
+      <option value="Cocos (Keeling) Islands" data-alternative-spellings="CC" data-relevancy-booster="0.5">Cocos (Keeling) Islands</option>
+      <option value="Colombia" data-alternative-spellings="CO">Colombia</option>
+      <option value="Comoros" data-alternative-spellings="KM جزر القمر">Comoros</option>
+      <option value="Congo" data-alternative-spellings="CG">Congo</option>
+      <option value="Congo, the Democratic Republic of the" data-alternative-spellings="CD Congo-Brazzaville Repubilika ya Kongo">Congo, the Democratic Republic of the</option>
+      <option value="Cook Islands" data-alternative-spellings="CK" data-relevancy-booster="0.5">Cook Islands</option>
+      <option value="Costa Rica" data-alternative-spellings="CR">Costa Rica</option>
+      <option value="Côte d'Ivoire" data-alternative-spellings="CI Cote dIvoire">Côte d'Ivoire</option>
+      <option value="Croatia" data-alternative-spellings="HR Hrvatska">Croatia</option>
+      <option value="Cuba" data-alternative-spellings="CU">Cuba</option>
+      <option value="Curaçao" data-alternative-spellings="CW Curacao">Curaçao</option>
+      <option value="Cyprus" data-alternative-spellings="CY Κύπρος Kýpros Kıbrıs">Cyprus</option>
+      <option value="Czech Republic" data-alternative-spellings="CZ Česká Ceska">Czech Republic</option>
+      <option value="Denmark" data-alternative-spellings="DK Danmark" data-relevancy-booster="1.5">Denmark</option>
+      <option value="Djibouti" data-alternative-spellings="DJ جيبوتي‎ Jabuuti Gabuuti">Djibouti</option>
+      <option value="Dominica" data-alternative-spellings="DM Dominique" data-relevancy-booster="0.5">Dominica</option>
+      <option value="Dominican Republic" data-alternative-spellings="DO">Dominican Republic</option>
+      <option value="Ecuador" data-alternative-spellings="EC">Ecuador</option>
+      <option value="Egypt" data-alternative-spellings="EG" data-relevancy-booster="1.5">Egypt</option>
+      <option value="El Salvador" data-alternative-spellings="SV">El Salvador</option>
+      <option value="Equatorial Guinea" data-alternative-spellings="GQ">Equatorial Guinea</option>
+      <option value="Eritrea" data-alternative-spellings="ER إرتريا ኤርትራ">Eritrea</option>
+      <option value="Estonia" data-alternative-spellings="EE Eesti">Estonia</option>
+      <option value="Ethiopia" data-alternative-spellings="ET ኢትዮጵያ">Ethiopia</option>
+      <option value="Falkland Islands (Malvinas)" data-alternative-spellings="FK" data-relevancy-booster="0.5">Falkland Islands (Malvinas)</option>
+      <option value="Faroe Islands" data-alternative-spellings="FO Føroyar Færøerne" data-relevancy-booster="0.5">Faroe Islands</option>
+      <option value="Fiji" data-alternative-spellings="FJ Viti फ़िजी">Fiji</option>
+      <option value="Finland" data-alternative-spellings="FI Suomi">Finland</option>
+      <option value="France" data-alternative-spellings="FR République française" data-relevancy-booster="2.5">France</option>
+      <option value="French Guiana" data-alternative-spellings="GF">French Guiana</option>
+      <option value="French Polynesia" data-alternative-spellings="PF Polynésie française">French Polynesia</option>
+      <option value="French Southern Territories" data-alternative-spellings="TF">French Southern Territories</option>
+      <option value="Gabon" data-alternative-spellings="GA République Gabonaise">Gabon</option>
+      <option value="Gambia" data-alternative-spellings="GM">Gambia</option>
+      <option value="Georgia" data-alternative-spellings="GE საქართველო">Georgia</option>
+      <option value="Germany" data-alternative-spellings="DE Bundesrepublik Deutschland" data-relevancy-booster="3">Germany</option>
+      <option value="Ghana" data-alternative-spellings="GH">Ghana</option>
+      <option value="Gibraltar" data-alternative-spellings="GI" data-relevancy-booster="0.5">Gibraltar</option>
+      <option value="Greece" data-alternative-spellings="GR Ελλάδα" data-relevancy-booster="1.5">Greece</option>
+      <option value="Greenland" data-alternative-spellings="GL grønland" data-relevancy-booster="0.5">Greenland</option>
+      <option value="Grenada" data-alternative-spellings="GD">Grenada</option>
+      <option value="Guadeloupe" data-alternative-spellings="GP">Guadeloupe</option>
+      <option value="Guam" data-alternative-spellings="GU">Guam</option>
+      <option value="Guatemala" data-alternative-spellings="GT">Guatemala</option>
+      <option value="Guernsey" data-alternative-spellings="GG" data-relevancy-booster="0.5">Guernsey</option>
+      <option value="Guinea" data-alternative-spellings="GN">Guinea</option>
+      <option value="Guinea-Bissau" data-alternative-spellings="GW">Guinea-Bissau</option>
+      <option value="Guyana" data-alternative-spellings="GY">Guyana</option>
+      <option value="Haiti" data-alternative-spellings="HT">Haiti</option>
+      <option value="Heard Island and McDonald Islands" data-alternative-spellings="HM">Heard Island and McDonald Islands</option>
+      <option value="Holy See (Vatican City State)" data-alternative-spellings="VA" data-relevancy-booster="0.5">Holy See (Vatican City State)</option>
+      <option value="Honduras" data-alternative-spellings="HN">Honduras</option>
+      <option value="Hong Kong" data-alternative-spellings="HK 香港">Hong Kong</option>
+      <option value="Hungary" data-alternative-spellings="HU Magyarország">Hungary</option>
+      <option value="Iceland" data-alternative-spellings="IS Island">Iceland</option>
+      <option value="India" data-alternative-spellings="IN भारत गणराज्य Hindustan" data-relevancy-booster="3">India</option>
+      <option value="Indonesia" data-alternative-spellings="ID" data-relevancy-booster="2">Indonesia</option>
+      <option value="Iran, Islamic Republic of" data-alternative-spellings="IR ایران">Iran, Islamic Republic of</option>
+      <option value="Iraq" data-alternative-spellings="IQ العراق‎">Iraq</option>
+      <option value="Ireland" data-alternative-spellings="IE Éire" data-relevancy-booster="1.2">Ireland</option>
+      <option value="Isle of Man" data-alternative-spellings="IM" data-relevancy-booster="0.5">Isle of Man</option>
+      <option value="Israel" data-alternative-spellings="IL إسرائيل ישראל">Israel</option>
+      <option value="Italy" data-alternative-spellings="IT Italia" data-relevancy-booster="2">Italy</option>
+      <option value="Jamaica" data-alternative-spellings="JM">Jamaica</option>
+      <option value="Japan" data-alternative-spellings="JP Nippon Nihon 日本" data-relevancy-booster="2.5">Japan</option>
+      <option value="Jersey" data-alternative-spellings="JE" data-relevancy-booster="0.5">Jersey</option>
+      <option value="Jordan" data-alternative-spellings="JO الأردن">Jordan</option>
+      <option value="Kazakhstan" data-alternative-spellings="KZ Қазақстан Казахстан">Kazakhstan</option>
+      <option value="Kenya" data-alternative-spellings="KE">Kenya</option>
+      <option value="Kiribati" data-alternative-spellings="KI">Kiribati</option>
+      <option value="Korea, Democratic People's Republic of" data-alternative-spellings="KP North Korea">Korea, Democratic People's Republic of</option>
+      <option value="Korea, Republic of" data-alternative-spellings="KR South Korea" data-relevancy-booster="1.5">Korea, Republic of</option>
+      <option value="Kuwait" data-alternative-spellings="KW الكويت">Kuwait</option>
+      <option value="Kyrgyzstan" data-alternative-spellings="KG Кыргызстан">Kyrgyzstan</option>
+      <option value="Lao People's Democratic Republic" data-alternative-spellings="LA">Lao People's Democratic Republic</option>
+      <option value="Latvia" data-alternative-spellings="LV Latvija">Latvia</option>
+      <option value="Lebanon" data-alternative-spellings="LB لبنان">Lebanon</option>
+      <option value="Lesotho" data-alternative-spellings="LS">Lesotho</option>
+      <option value="Liberia" data-alternative-spellings="LR">Liberia</option>
+      <option value="Libyan Arab Jamahiriya" data-alternative-spellings="LY ليبيا">Libyan Arab Jamahiriya</option>
+      <option value="Liechtenstein" data-alternative-spellings="LI">Liechtenstein</option>
+      <option value="Lithuania" data-alternative-spellings="LT Lietuva">Lithuania</option>
+      <option value="Luxembourg" data-alternative-spellings="LU">Luxembourg</option>
+      <option value="Macao" data-alternative-spellings="MO">Macao</option>
+      <option value="Macedonia, The Former Yugoslav Republic Of" data-alternative-spellings="MK Македонија">Macedonia, The Former Yugoslav Republic Of</option>
+      <option value="Madagascar" data-alternative-spellings="MG Madagasikara">Madagascar</option>
+      <option value="Malawi" data-alternative-spellings="MW">Malawi</option>
+      <option value="Malaysia" data-alternative-spellings="MY">Malaysia</option>
+      <option value="Maldives" data-alternative-spellings="MV">Maldives</option>
+      <option value="Mali" data-alternative-spellings="ML">Mali</option>
+      <option value="Malta" data-alternative-spellings="MT">Malta</option>
+      <option value="Marshall Islands" data-alternative-spellings="MH" data-relevancy-booster="0.5">Marshall Islands</option>
+      <option value="Martinique" data-alternative-spellings="MQ">Martinique</option>
+      <option value="Mauritania" data-alternative-spellings="MR الموريتانية">Mauritania</option>
+      <option value="Mauritius" data-alternative-spellings="MU">Mauritius</option>
+      <option value="Mayotte" data-alternative-spellings="YT">Mayotte</option>
+      <option value="Mexico" data-alternative-spellings="MX Mexicanos" data-relevancy-booster="1.5">Mexico</option>
+      <option value="Micronesia, Federated States of" data-alternative-spellings="FM">Micronesia, Federated States of</option>
+      <option value="Moldova, Republic of" data-alternative-spellings="MD">Moldova, Republic of</option>
+      <option value="Monaco" data-alternative-spellings="MC">Monaco</option>
+      <option value="Mongolia" data-alternative-spellings="MN Mongγol ulus Монгол улс">Mongolia</option>
+      <option value="Montenegro" data-alternative-spellings="ME">Montenegro</option>
+      <option value="Montserrat" data-alternative-spellings="MS" data-relevancy-booster="0.5">Montserrat</option>
+      <option value="Morocco" data-alternative-spellings="MA المغرب">Morocco</option>
+      <option value="Mozambique" data-alternative-spellings="MZ Moçambique">Mozambique</option>
+      <option value="Myanmar" data-alternative-spellings="MM">Myanmar</option>
+      <option value="Namibia" data-alternative-spellings="NA Namibië">Namibia</option>
+      <option value="Nauru" data-alternative-spellings="NR Naoero" data-relevancy-booster="0.5">Nauru</option>
+      <option value="Nepal" data-alternative-spellings="NP नेपाल">Nepal</option>
+      <option value="Netherlands" data-alternative-spellings="NL Holland Nederland" data-relevancy-booster="1.5">Netherlands</option>
+      <option value="New Caledonia" data-alternative-spellings="NC" data-relevancy-booster="0.5">New Caledonia</option>
+      <option value="New Zealand" data-alternative-spellings="NZ Aotearoa">New Zealand</option>
+      <option value="Nicaragua" data-alternative-spellings="NI">Nicaragua</option>
+      <option value="Niger" data-alternative-spellings="NE Nijar">Niger</option>
+      <option value="Nigeria" data-alternative-spellings="NG Nijeriya Naíjíríà" data-relevancy-booster="1.5">Nigeria</option>
+      <option value="Niue" data-alternative-spellings="NU" data-relevancy-booster="0.5">Niue</option>
+      <option value="Norfolk Island" data-alternative-spellings="NF" data-relevancy-booster="0.5">Norfolk Island</option>
+      <option value="Northern Mariana Islands" data-alternative-spellings="MP" data-relevancy-booster="0.5">Northern Mariana Islands</option>
+      <option value="Norway" data-alternative-spellings="NO Norge Noreg" data-relevancy-booster="1.5">Norway</option>
+      <option value="Oman" data-alternative-spellings="OM عمان">Oman</option>
+      <option value="Pakistan" data-alternative-spellings="PK پاکستان" data-relevancy-booster="2">Pakistan</option>
+      <option value="Palau" data-alternative-spellings="PW" data-relevancy-booster="0.5">Palau</option>
+      <option value="Palestinian Territory, Occupied" data-alternative-spellings="PS فلسطين">Palestinian Territory, Occupied</option>
+      <option value="Panama" data-alternative-spellings="PA">Panama</option>
+      <option value="Papua New Guinea" data-alternative-spellings="PG">Papua New Guinea</option>
+      <option value="Paraguay" data-alternative-spellings="PY">Paraguay</option>
+      <option value="Peru" data-alternative-spellings="PE">Peru</option>
+      <option value="Philippines" data-alternative-spellings="PH Pilipinas" data-relevancy-booster="1.5">Philippines</option>
+      <option value="Pitcairn" data-alternative-spellings="PN" data-relevancy-booster="0.5">Pitcairn</option>
+      <option value="Poland" data-alternative-spellings="PL Polska" data-relevancy-booster="1.25">Poland</option>
+      <option value="Portugal" data-alternative-spellings="PT Portuguesa" data-relevancy-booster="1.5">Portugal</option>
+      <option value="Puerto Rico" data-alternative-spellings="PR">Puerto Rico</option>
+      <option value="Qatar" data-alternative-spellings="QA قطر">Qatar</option>
+      <option value="Réunion" data-alternative-spellings="RE Reunion">Réunion</option>
+      <option value="Romania" data-alternative-spellings="RO Rumania Roumania România">Romania</option>
+      <option value="Russian Federation" data-alternative-spellings="RU Rossiya Российская Россия" data-relevancy-booster="2.5">Russian Federation</option>
+      <option value="Rwanda" data-alternative-spellings="RW">Rwanda</option>
+      <option value="Saint Barthélemy" data-alternative-spellings="BL St. Barthelemy">Saint Barthélemy</option>
+      <option value="Saint Helena" data-alternative-spellings="SH St.">Saint Helena</option>
+      <option value="Saint Kitts and Nevis" data-alternative-spellings="KN St.">Saint Kitts and Nevis</option>
+      <option value="Saint Lucia" data-alternative-spellings="LC St.">Saint Lucia</option>
+      <option value="Saint Martin (French Part)" data-alternative-spellings="MF St.">Saint Martin (French Part)</option>
+      <option value="Saint Pierre and Miquelon" data-alternative-spellings="PM St.">Saint Pierre and Miquelon</option>
+      <option value="Saint Vincent and the Grenadines" data-alternative-spellings="VC St.">Saint Vincent and the Grenadines</option>
+      <option value="Samoa" data-alternative-spellings="WS">Samoa</option>
+      <option value="San Marino" data-alternative-spellings="SM RSM Repubblica">San Marino</option>
+      <option value="Sao Tome and Principe" data-alternative-spellings="ST">Sao Tome and Principe</option>
+      <option value="Saudi Arabia" data-alternative-spellings="SA السعودية">Saudi Arabia</option>
+      <option value="Senegal" data-alternative-spellings="SN Sénégal">Senegal</option>
+      <option value="Serbia" data-alternative-spellings="RS Србија Srbija">Serbia</option>
+      <option value="Seychelles" data-alternative-spellings="SC" data-relevancy-booster="0.5">Seychelles</option>
+      <option value="Sierra Leone" data-alternative-spellings="SL">Sierra Leone</option>
+      <option value="Singapore" data-alternative-spellings="SG Singapura  சிங்கப்பூர் குடியரசு 新加坡共和国">Singapore</option>
+      <option value="Sint Maarten (Dutch Part)" data-alternative-spellings="SX">Sint Maarten (Dutch Part)</option>
+      <option value="Slovakia" data-alternative-spellings="SK Slovenská Slovensko">Slovakia</option>
+      <option value="Slovenia" data-alternative-spellings="SI Slovenija">Slovenia</option>
+      <option value="Solomon Islands" data-alternative-spellings="SB">Solomon Islands</option>
+      <option value="Somalia" data-alternative-spellings="SO الصومال">Somalia</option>
+      <option value="South Africa" data-alternative-spellings="ZA RSA Suid-Afrika">South Africa</option>
+      <option value="South Georgia and the South Sandwich Islands" data-alternative-spellings="GS">South Georgia and the South Sandwich Islands</option>
+      <option value="South Sudan" data-alternative-spellings="SS">South Sudan</option>
+      <option value="Spain" data-alternative-spellings="ES España" data-relevancy-booster="2">Spain</option>
+      <option value="Sri Lanka" data-alternative-spellings="LK ශ්‍රී ලංකා இலங்கை Ceylon">Sri Lanka</option>
+      <option value="Sudan" data-alternative-spellings="SD السودان">Sudan</option>
+      <option value="Suriname" data-alternative-spellings="SR शर्नम् Sarnam Sranangron">Suriname</option>
+      <option value="Svalbard and Jan Mayen" data-alternative-spellings="SJ" data-relevancy-booster="0.5">Svalbard and Jan Mayen</option>
+      <option value="Swaziland" data-alternative-spellings="SZ weSwatini Swatini Ngwane">Swaziland</option>
+      <option value="Sweden" data-alternative-spellings="SE Sverige" data-relevancy-booster="1.5">Sweden</option>
+      <option value="Switzerland" data-alternative-spellings="CH Swiss Confederation Schweiz Suisse Svizzera Svizra" data-relevancy-booster="1.5">Switzerland</option>
+      <option value="Syrian Arab Republic" data-alternative-spellings="SY Syria سورية">Syrian Arab Republic</option>
+      <option value="Taiwan, Province of China" data-alternative-spellings="TW 台灣 臺灣">Taiwan, Province of China</option>
+      <option value="Tajikistan" data-alternative-spellings="TJ Тоҷикистон Toçikiston">Tajikistan</option>
+      <option value="Tanzania, United Republic of" data-alternative-spellings="TZ">Tanzania, United Republic of</option>
+      <option value="Thailand" data-alternative-spellings="TH ประเทศไทย Prathet Thai">Thailand</option>
+      <option value="Timor-Leste" data-alternative-spellings="TL">Timor-Leste</option>
+      <option value="Togo" data-alternative-spellings="TG Togolese">Togo</option>
+      <option value="Tokelau" data-alternative-spellings="TK" data-relevancy-booster="0.5">Tokelau</option>
+      <option value="Tonga" data-alternative-spellings="TO">Tonga</option>
+      <option value="Trinidad and Tobago" data-alternative-spellings="TT">Trinidad and Tobago</option>
+      <option value="Tunisia" data-alternative-spellings="TN تونس">Tunisia</option>
+      <option value="Turkey" data-alternative-spellings="TR Türkiye Turkiye">Turkey</option>
+      <option value="Turkmenistan" data-alternative-spellings="TM Türkmenistan">Turkmenistan</option>
+      <option value="Turks and Caicos Islands" data-alternative-spellings="TC" data-relevancy-booster="0.5">Turks and Caicos Islands</option>
+      <option value="Tuvalu" data-alternative-spellings="TV" data-relevancy-booster="0.5">Tuvalu</option>
+      <option value="Uganda" data-alternative-spellings="UG">Uganda</option>
+      <option value="Ukraine" data-alternative-spellings="UA Ukrayina Україна">Ukraine</option>
+      <option value="United Arab Emirates" data-alternative-spellings="AE UAE الإمارات">United Arab Emirates</option>
+      <option value="United Kingdom" data-alternative-spellings="GB Great Britain England UK Wales Scotland Northern Ireland" data-relevancy-booster="2.5">United Kingdom</option>
+      <option value="United States" data-relevancy-booster="3.5" data-alternative-spellings="US USA United States of America">United States</option>
+      <option value="United States Minor Outlying Islands" data-alternative-spellings="UM">United States Minor Outlying Islands</option>
+      <option value="Uruguay" data-alternative-spellings="UY">Uruguay</option>
+      <option value="Uzbekistan" data-alternative-spellings="UZ Ўзбекистон O'zbekstan O‘zbekiston">Uzbekistan</option>
+      <option value="Vanuatu" data-alternative-spellings="VU">Vanuatu</option>
+      <option value="Venezuela" data-alternative-spellings="VE">Venezuela</option>
+      <option value="Vietnam" data-alternative-spellings="VN Việt Nam" data-relevancy-booster="1.5">Vietnam</option>
+      <option value="Virgin Islands, British" data-alternative-spellings="VG" data-relevancy-booster="0.5">Virgin Islands, British</option>
+      <option value="Virgin Islands, U.S." data-alternative-spellings="VI" data-relevancy-booster="0.5">Virgin Islands, U.S.</option>
+      <option value="Wallis and Futuna" data-alternative-spellings="WF" data-relevancy-booster="0.5">Wallis and Futuna</option>
+      <option value="Western Sahara" data-alternative-spellings="EH لصحراء الغربية">Western Sahara</option>
+      <option value="Yemen" data-alternative-spellings="YE اليمن">Yemen</option>
+      <option value="Zambia" data-alternative-spellings="ZM">Zambia</option>
+      <option value="Zimbabwe" data-alternative-spellings="ZW">Zimbabwe</option>
+    </select>
+			</div>
+			</td>
+			<td>
+				<span style="color:red;font-weight:bold;">*</span><strong>Visa Type:</strong></br>
+			<div><input type="text" name="citizenshipCountry" maxlength="75" size="30"></br>
+			</div>
+			</td>
+		</tr>
+	</table>
+	</div>
+
+</div>
+
+
+<hr />
+
+<div>
+<span style="color:red;font-weight:bold;">*</span> 
+<strong>Is this an application for resumption of studies following a Medical Leave of Absence?</strong>
+ <div style="margin-left: 60px"><input type="radio" id="yes_medical" name="medical" value="yes" >&nbsp;Yes<br>
+  <input type="radio" id="no_medical" name="medical" value="no" checked>&nbsp;No<br></div>
+	<div id="medical" style="display: none; margin-left: 40px; margin-right: 40px; text-align: justify"><br>If yes, please close this form; you instead need to fill out a 
+	<a href="http://www.pace.edu/office-student-assistance/sites/pace.edu.office-student-assistance/files/files/Forms/Resumption%20of%20Studies%20After%20a%20Medical%20LOA.pdf" target="new">
+	Resumption of Studies After A Medical Leave of Absence Form</a>, as well as an <a href="http://www.pace.edu/office-student-assistance/sites/pace.edu.office-student-assistance/files/files/Forms/%236%20Authorization%20re%20PHI%20%28KS%29%2008%2020%202012.doc%20FINAL_MC.pdf" target="new">
+	Authorization for Information Release for the Use and Disclosure of PHI 
+	and a <a href="http://www.pace.edu/office-student-assistance/sites/pace.edu.office-student-assistance/files/files/Forms/Consent%20for%20Communication%20for%20Med%20LOA%20or%20ROS_doc3_MC%20-%20No%20Registrar%20Name.pdf" target="new">
+	Consent for Communication Regarding Request for MLOA or ROS</a>.  
+	</div>
+</div>
+
+<hr />
+
+
+<table width="800px">
+	<tr>
+		<td>
+			<span style="color:red;font-weight:bold;">*</span><strong>Last Semester Attended at Pace:</strong></br></br>
+			<div style="margin-left: 60px">(Year): 20<input type="text" name="Last_Year_Attended" maxlength="2" size="5"><br>
+
+			  <input type="radio" name="term_last_attended" value="Fall (70)">Fall (70)<br>
+				<input type="radio" name="term_last_attended" value="Spring (20)">Spring (20)<br>
+				<input type="radio" name="term_last_attended" value="Summer I 2014 (40)">Summer I 2014 (40)<br>
+				<input type="radio" name="term_last_attended" value="Summer II 2014 (50)">Summer II 2014 (50)
+				</div>
+			
+		</td>
+		<td>
+			<span style="color:red;font-weight:bold;">*</span><strong>Semester Resumption of Studies Will 
+			Occur:</strong></br></br>
+		<div style="margin-left: 60px">(Year): 20<input type="text" name="Resumption_Year" maxlength="2" size="5"></br>
+
+		  <input type="radio" name="resumption_year" value="Fall (70)">Fall (70)<br>
+			<input type="radio" name="resumption_year" value="Spring (20)">Spring (20)<br>
+			<input type="radio" name="resumption_year" value="Summer I 2014 (40)">Summer I 2014 (40)<br>
+			<input type="radio" name="resumption_year" value="Summer II 2014 (50)">Summer II 2014 (50)</div>
+			
+		</td>
+	</tr>
+</table>
+
+
+<hr />
+ 
+<div style="position:relative">
+		<span style="color:red;font-weight:bold;">*</span><strong>I was previously enrolled in the following</strong>:<br><br>
+<table id="previouscollege" style="margin-left: 60px">
+	<tr>
+		<th>
+			<strong>Level</strong>
+		</th>
+		<!--<th>
+			<strong>Home Campus</strong>
+		</th>-->
+		<th>
+			<strong>Status</strong>
+		</th>
+	</tr>
+	<tr>
+		<td>
+			<input type="radio" name="level" value="01" id="undergraduate">01 (Undergraduate)
+		</td>
+		<!--<td>
+			<input type="checkbox" name="campus" value="1">1 (New York)
+		</td>-->
+		<td>
+			<input type="radio" name="status" value="1">Matriculated (Degree seeking)
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<input type="radio" name="level" value="02" id="graduate">02 (Graduate)
+		</td>
+		<!--<td>
+			<input type="checkbox" name="campus" value="2">2 (Pleasantville)
+		</td>-->
+		<td>
+			<input type="radio" name="status" value="2" id="undergraduate">Non-Matriculated (Undergrad)
+		</td>
+	</tr>
+	<tr>
+		<td>
+		</td>
+		<!--<td>
+			<input type="checkbox" name="campus" value="3">3 (White Plains)
+		</td>-->
+		<td>
+			<input type="radio" name="status" value="3">NDS (Graduate)
+		</td>
+	</tr>
+</table>
+
+	<div id="undergraduateGPAReq" style="display: none; margin-left: 40px">
+		<strong>NOTE THAT A MINIMUM 2.00 OVERALL GPA IS REQUIRED FOR UNDERGRADUATE RESUMPTION</strong>
+	</div>
+
+	<div id="graduateGPAReq" style="display: none; margin-left: 40px">
+		<strong>NOTE THAT A MINIMUM 3.00 OVERALL GPA IS REQUIRED FOR GRADUATE RESUMPTION</strong>
+	</div>
+ 
+</div>
+
+<hr  />
+
+<div style="position:relative">
+<span style="color:red;font-weight:bold">*</span> 
+<strong>Have you attended any other college or institution since last term of attendance at Pace?</strong><br />
+<div style="margin-left: 60px">
+  <input type="radio" id="yes_other_college" name="other_college" value="yes" >&nbsp;Yes<br>
+  <input type="radio" name="other_college" id="no_other_college" value="no" checked>&nbsp;No<br></div>
+<div id="yes_other_college2" style="display: none; margin-left: 20px; margin-right: 10px"><br>If yes, you may <u>not</u> resume studies until all official transcripts are received.  
+Please indicate below all schools you have attended and have the school and have the school 
+forward an official transcript to the Office of Student Assistance.
+<table width="600" style="margin-left:50px; margin-top: 10px">
+	<tr>
+		<td><strong>Name of College(s):</strong>
+		</td>
+		<td colspan="3"><strong>Dates of Attendance:</strong>
+		</td>
+	</tr>
+	<tr>
+		<td><input type="text" name="college" size="50">
+		</td>
+		<td><input type="text" name="collegedate" size="10" id="popupDatepicker">
+		</td>
+		<td width="20">to
+		</td>
+		<td><input type="text" name="collegedate" size="10" id="popupDatepicker2">
+		</td>
+	</tr>
+	<tr>
+		<td><input type="text" name="college" size="50">
+		</td>
+		<td><input type="text" name="collegedate" size="10" id="popupDatepicker3">
+		</td>
+		<td width="20">to
+		</td>
+		<td><input type="text" name="collegedate" size="10" id="popupDatepicker4">
+		</td>
+	</tr>
+		<tr>
+		<td><input type="text" name="college" size="50">
+		</td>
+		<td><input type="text" name="collegedate" size="10" id="popupDatepicker5">
+		</td>
+		<td width="20">to
+		</td>
+		<td><input type="text" name="collegedate" size="10" id="popupDatepicker6">
+		</td>
+	</tr>
+</table></div>
+ </div>
+
+
+<hr />
+
+<div style="width:auto;text-align:center">
+
+<input type="hidden" name="Todays_Date" value="7/29/2014">
+
+<br>
+
+<span style="color:red;font-weight:bold;">*</span> By pressing the submit button, you agree 
+that the <br>information you entered on this form is accurate to the best of your ability.<br /><br />
+<input type="submit" value="Submit Form" style="height:40px;width:170px"><br /><br />
+
+
+</div>
+</form>
+
+  </body>
+</html>
